@@ -8,7 +8,7 @@ global.foodData = require('./db')(function call(err, data, CatData) {
 
 const express = require('express')
 const app = express()
-const port = 5000
+const PORT = process.env.PORT || 5000
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.header(
@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/auth', require('./Routes/Auth'));
 
-app.listen(port, () => {
-  console.log(`Example app listening on http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening on http://localhost:${PORT}`)
 })
 

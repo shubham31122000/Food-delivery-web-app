@@ -1,0 +1,1 @@
+export const BASE_URL = "https://foodmern1.onrender.com"
